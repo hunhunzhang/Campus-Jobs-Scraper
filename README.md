@@ -1,6 +1,6 @@
 # Campus Jobs Scraper / 校园招聘爬虫集合
 
-一个基于 Python Playwright 与 Requests 的自动化爬虫工具集合，目前支持抓取 **米哈游 (miHoYo)** 、 **字节跳动 (Bytedance)** 以及 **腾讯 (Tencent)** 的校园招聘官网职位信息，并直接生成格式化好的 Excel 报表。
+一个基于 Python Playwright 与 Requests 的自动化爬虫工具集合，目前支持抓取 **米哈游 (miHoYo)** 、 **字节跳动 (Bytedance)** 、 **腾讯 (Tencent)** 以及 **美团 (Meituan)** 的校园招聘官网职位信息，并直接生成格式化好的 Excel 报表。
 
 ## ✨ 项目功能
 
@@ -22,6 +22,9 @@
 3.  **腾讯 (Tencent)**: `tencent_crawler.py`
     *   目标网站：[腾讯校园招聘](https://join.qq.com/post.html?query=p_1)
     *   输出文件：`tencent_campus_jobs.xlsx`
+4.  **美团 (Meituan)**: `meituan_crawler.py`
+    *   目标网站：[美团校园招聘 (含北斗计划)](https://zhaopin.meituan.com/web/campus)
+    *   输出文件：`meituan_campus_jobs.xlsx`
 
 ## 🛠️ 实现思路
 
@@ -80,9 +83,13 @@ playwright install
         ```bash
         python tencent_crawler.py
         ```
+    *   **爬取美团 (Meituan)**：
+        ```bash
+        python meituan_crawler.py
+        ```
 
 2.  **查看结果**：
-    脚本运行完成后，会在当前目录下生成排版非常极客极简的对应的 Excel 文件（如 `tencent_campus_jobs.xlsx` 等）。遇到随时通过 `Ctrl + c` 中断的情况数据仍然能成功归档。
+    脚本运行完成后，会在当前目录下生成排版非常极客极简的对应的 Excel 文件（如 `meituan_campus_jobs.xlsx` 等）。遇到随时通过 `Ctrl + c` 中断的情况数据仍然能成功归档。
 
 ##  输出示例
 
